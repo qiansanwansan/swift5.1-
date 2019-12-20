@@ -27,7 +27,7 @@ class SecondeController: UIViewController {
         view.backgroundColor = .red
         
         view.addSubview(tableView)
-        tableView.frame = CGRect.init(x: 0, y: 0, width: kScreenW, height: kScreenH - )
+        tableView.frame = CGRect.init(x: 0, y: 0, width: kScreenW, height: kScreenH - kTabBarH)
         
         // 添加上下拉刷新
 //        MJRefreshGifHeader
@@ -63,7 +63,11 @@ class SecondeController: UIViewController {
         tableView.mj_footer?.endRefreshing {
             print("已经停止上拉刷新")
             self.arrCount += 5
-            self.tableView.reloadData()
+            if self.arrCount > 30{
+                self.tableView.mj_footer?.endRefreshingWithNoMoreData()
+            }else{
+                self.tableView.reloadData()
+            }
         }
     }
 

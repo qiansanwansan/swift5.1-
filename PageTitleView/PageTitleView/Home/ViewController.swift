@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }()
     
     private lazy var pageContentView: PageContentView = { [weak self] in
-        let pageFrame : CGRect = CGRect.init(x: 0, y: kNavAndStateH + kPageTitleH, width: view.frame.width, height: kScreenH - kNavAndStateH - KTabBarH - kPageTitleH)
+        let pageFrame : CGRect = CGRect.init(x: 0, y: kNavAndStateH + kPageTitleH, width: view.frame.width, height: kScreenH - kNavAndStateH - kTabBarH - kPageTitleH)
         
         var childVCs = [UIViewController]()
         let recommendVC = RecommendVC()

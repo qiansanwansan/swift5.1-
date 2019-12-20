@@ -39,6 +39,14 @@ class FYTabbarController: UITabBarController , RootTabBarDelegate{
     func addClick() {
         
         print("add succeed")
+        
+        let vc = PlusController()
+    
+//        present(vc, animated: true) {
+//
+//        }
+
+        PresentTransition.presentWithAnimate(fromVC: self, toVC: vc)
     }
     
     func setRootTabbarConntroller(){
@@ -75,6 +83,8 @@ class FYTabbarController: UITabBarController , RootTabBarDelegate{
             barItem.setTitleTextAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)], for: .normal)
             barItem.setTitleTextAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)], for: .selected)
             barItem.imageInsets = UIEdgeInsets(top: -10,left: 0,bottom: 0,right: 0)
+            
+            /*这些设置都可以使用默认的，但不排除有些设计人员喜欢将tabbar的文字调大，所以这里写上更改方式*/
             //设置标题
 //            vc?.title = self.tabBarTitles[i]
             

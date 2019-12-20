@@ -69,15 +69,24 @@ class RecommendVC: UIViewController {
         }
         
         // 添加上下拉刷新
-//        let header:MJRefreshHeader = MJRefreshHeader.init(refreshingTarget: self, refreshingAction: #selector(headerAction))
-//        collectionView.mj_header = header
-//        let footer:MJRefreshFooter = MJRefreshFooter.init(refreshingTarget: self, refreshingAction: #selector(footerAction))
-//        collectionView.mj_footer = footer
-        let header:MJRefreshHeader = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(headerAction))
+        let header:MJRefreshGifHeader = MJRefreshGifHeader.init(refreshingTarget: self, refreshingAction: #selector(headerAction))
         collectionView.mj_header = header
+        var images = [UIImage]()
+        for index in 1...2 {
+            let image = UIImage.init(named: "img_loading_\(index)")
+            images.append(image!)
+        }
+        
+        header.setImages(images, for: MJRefreshState.idle) // 设置普通状态的动画图片
+        header.setImages(images, for: MJRefreshState.pulling) // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
+        header.setImages(images, for: MJRefreshState.refreshing) // 设置正在刷新状态的动画图片
         header.ignoredScrollViewContentInsetTop = kCycleH+90
-        //        let footer:MJRefreshFooter = MJRefreshFooter.init(refreshingTarget: self, refreshingAction: #selector(footerAction))
-        //        tableView.mj_footer = footer
+        
+        // 隐藏状态和时间
+        header.lastUpdatedTimeLabel?.isHidden = true
+        header.stateLabel?.isHidden = true
+        header.beginRefreshing()
+        
         let footer:MJRefreshFooter = MJRefreshAutoNormalFooter.init(refreshingTarget: self, refreshingAction: #selector(footerAction))
         collectionView.mj_footer = footer
     }

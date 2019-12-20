@@ -22,7 +22,7 @@ func kStateBarHeight() -> CGFloat {
 }
 
 let kNavigationH:CGFloat = 44.0
-let KTabBarH:CGFloat = IS_IPHONE_X ? 83.0 : 49.0
+let kTabBarH:CGFloat = IS_IPHONE_X ? 83.0 : 49.0
 let kNavAndStateH:CGFloat = kStateH + kNavigationH
 
 /*
