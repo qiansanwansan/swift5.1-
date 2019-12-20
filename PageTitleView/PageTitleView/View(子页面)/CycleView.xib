@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CycleView" customModule="PageTitleView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bUN-f2-RrP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kUP-Q8-aom">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" defersCurrentPageDisplay="YES" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="K35-C2-dDc">
+                    <rect key="frame" x="278" y="116" width="87" height="37"/>
+                    <color key="currentPageIndicatorTintColor" red="0.98132652044296265" green="0.80116885900497437" blue="0.21171799302101135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bUN-f2-RrP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8TT-Ym-hEW"/>
+                <constraint firstItem="bUN-f2-RrP" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Dzs-6g-dDz"/>
+                <constraint firstAttribute="bottom" secondItem="K35-C2-dDc" secondAttribute="bottom" constant="-3" id="UTe-md-u0Z"/>
+                <constraint firstAttribute="bottom" secondItem="bUN-f2-RrP" secondAttribute="bottom" id="a1i-pq-znz"/>
+                <constraint firstItem="bUN-f2-RrP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dFt-am-IWH"/>
+                <constraint firstItem="bUN-f2-RrP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="p8v-LY-gPM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="K35-C2-dDc" secondAttribute="trailing" constant="10" id="qaD-WW-djT"/>
+                <constraint firstItem="bUN-f2-RrP" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ur9-ea-N9Y"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectionView" destination="bUN-f2-RrP" id="QEA-JO-MJS"/>
+                <outlet property="pageControl" destination="K35-C2-dDc" id="riO-E1-Aw3"/>
+            </connections>
+            <point key="canvasLocation" x="101" y="59"/>
+        </view>
+    </objects>
+</document>
