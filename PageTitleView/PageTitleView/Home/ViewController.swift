@@ -40,11 +40,12 @@ class ViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        return;
         // Do any additional setup after loading the view.
         view.addSubview(pageTitleView)
         view.addSubview(pageContentView)
         pageContentView.backgroundColor = .purple
-        view.backgroundColor = .white
         setupUI()
     }
 

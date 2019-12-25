@@ -10,9 +10,9 @@ import UIKit
 
 class FYTabbarController: UITabBarController , RootTabBarDelegate{
     
-    let tabBarNormalImages = ["TabBar0_Normal","TabBar0_Normal","TabBar0_Normal","TabBar0_Normal"]
-    let tabBarSelectedImages = ["TabBar0_Selected","TabBar0_Selected","TabBar0_Selected","TabBar0_Selected"]
-    let tabBarTitles = ["首页","消息","功能","我的"]
+    let tabBarNormalImages = ["btn_home_normal","btn_column_normal","btn_live_normal","btn_user_normal"]
+    let tabBarSelectedImages = ["btn_home_selected","btn_column_selected","btn_live_selected","btn_user_selected"]
+    let tabBarTitles = ["首页","消息","直播","我的"]
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -64,7 +64,7 @@ class FYTabbarController: UITabBarController , RootTabBarDelegate{
             case 2:
                 vc = UIViewController()
             case 3:
-                vc = UIViewController()
+                vc = MineController()
             default:
                 break
             }
@@ -74,6 +74,7 @@ class FYTabbarController: UITabBarController , RootTabBarDelegate{
             let nav = RootNavigationController.init(rootViewController: vc!)
             
             //1.创建tabbarItem
+            /*这些设置都可以使用默认的，但不排除有些设计人员喜欢将tabbar的文字调大，所以这里写上更改方式*/
             let barItem = UITabBarItem.init(title: self.tabBarTitles[i], image: UIImage.init(named: self.tabBarNormalImages[i])?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage.init(named: self.tabBarSelectedImages[i])?.withRenderingMode(.alwaysOriginal))
 //            barItem.titlePositionAdjustment = UIOffset.init(horizontal: 0, vertical: 0)
             //2.更改字体颜色x
@@ -84,9 +85,9 @@ class FYTabbarController: UITabBarController , RootTabBarDelegate{
             barItem.setTitleTextAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)], for: .selected)
             barItem.imageInsets = UIEdgeInsets(top: -10,left: 0,bottom: 0,right: 0)
             
-            /*这些设置都可以使用默认的，但不排除有些设计人员喜欢将tabbar的文字调大，所以这里写上更改方式*/
+            
             //设置标题
-//            vc?.title = self.tabBarTitles[i]
+            vc?.title = self.tabBarTitles[i]
             
             //设置根控制器
             vc?.tabBarItem = barItem

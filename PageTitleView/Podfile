@@ -12,4 +12,7 @@ pod 'SwiftyJSON'
 pod 'Kingfisher'
 pod 'MJRefresh'
 
+pod 'YPImagePicker'
+
+
 end

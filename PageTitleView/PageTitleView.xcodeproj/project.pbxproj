@@ -12,6 +12,10 @@
 		FA10F4C32395FE95009F757B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F4C22395FE95009F757B /* AppDelegate.swift */; };
 		FA10F4CA2395FE97009F757B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA10F4C92395FE97009F757B /* Assets.xcassets */; };
 		FA10F4CD2395FE97009F757B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA10F4CB2395FE97009F757B /* LaunchScreen.storyboard */; };
+		FA155CF723B3124700754441 /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA155CF623B3124700754441 /* MineController.swift */; };
+		FA155CFA23B3141500754441 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA155CF823B3141500754441 /* AvatarCell.swift */; };
+		FA155CFB23B3141500754441 /* AvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA155CF923B3141500754441 /* AvatarCell.xib */; };
+		FA155CFD23B335EB00754441 /* UIImage+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA155CFC23B335EB00754441 /* UIImage+AlamofireImage.swift */; };
 		FA6E964B23AC773E00A4DC75 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E963423AC773E00A4DC75 /* CycleModel.swift */; };
 		FA6E964C23AC773E00A4DC75 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E963523AC773E00A4DC75 /* ViewModel.swift */; };
 		FA6E964D23AC773E00A4DC75 /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E963623AC773E00A4DC75 /* RoomModel.swift */; };
@@ -54,6 +58,10 @@
 		FA10F4C92395FE97009F757B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA10F4CC2395FE97009F757B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA10F4CE2395FE97009F757B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA155CF623B3124700754441 /* MineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
+		FA155CF823B3141500754441 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		FA155CF923B3141500754441 /* AvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCell.xib; sourceTree = "<group>"; };
+		FA155CFC23B335EB00754441 /* UIImage+AlamofireImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+AlamofireImage.swift"; sourceTree = "<group>"; };
 		FA6E963423AC773E00A4DC75 /* CycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		FA6E963523AC773E00A4DC75 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		FA6E963623AC773E00A4DC75 /* RoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
@@ -215,6 +223,10 @@
 		FA6E966523AC777E00A4DC75 /* Mine(我的) */ = {
 			isa = PBXGroup;
 			children = (
+				FA155CF623B3124700754441 /* MineController.swift */,
+				FA155CF823B3141500754441 /* AvatarCell.swift */,
+				FA155CF923B3141500754441 /* AvatarCell.xib */,
+				FA155CFC23B335EB00754441 /* UIImage+AlamofireImage.swift */,
 			);
 			path = "Mine(我的)";
 			sourceTree = "<group>";
@@ -317,6 +329,7 @@
 			files = (
 				FA6E965923AC773E00A4DC75 /* PrettyCell.xib in Resources */,
 				FA6E965B23AC773E00A4DC75 /* CycleCell.xib in Resources */,
+				FA155CFB23B3141500754441 /* AvatarCell.xib in Resources */,
 				FA6E965A23AC773E00A4DC75 /* NormalViewCell.xib in Resources */,
 				FA6E965723AC773E00A4DC75 /* CycleView.xib in Resources */,
 				FA10F4CD2395FE97009F757B /* LaunchScreen.storyboard in Resources */,
@@ -377,10 +390,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6E965D23AC773E00A4DC75 /* CycleCell.swift in Sources */,
+				FA155CFA23B3141500754441 /* AvatarCell.swift in Sources */,
 				FA6E966E23AC77CD00A4DC75 /* Date_extension.swift in Sources */,
 				FA6E964E23AC773E00A4DC75 /* RecommendModel.swift in Sources */,
 				FA6E965623AC773E00A4DC75 /* PrettyCell.swift in Sources */,
 				FA6E966323AC775F00A4DC75 /* SecondeController.swift in Sources */,
+				FA155CFD23B335EB00754441 /* UIImage+AlamofireImage.swift in Sources */,
 				FA0F78502397B7A200A34ACC /* FYTabbarController.swift in Sources */,
 				FA6E967623ACA4DC00A4DC75 /* PresentTransition.swift in Sources */,
 				FA6E965423AC773E00A4DC75 /* NormalViewCell.swift in Sources */,
@@ -398,6 +413,7 @@
 				FA6E965523AC773E00A4DC75 /* GameCell.swift in Sources */,
 				FA6E966C23AC77CD00A4DC75 /* Color_extension.swift in Sources */,
 				FA6E966023AC773E00A4DC75 /* SectionHeader.swift in Sources */,
+				FA155CF723B3124700754441 /* MineController.swift in Sources */,
 				FA10F4C32395FE95009F757B /* AppDelegate.swift in Sources */,
 				FA6E964C23AC773E00A4DC75 /* ViewModel.swift in Sources */,
 				FA6E964B23AC773E00A4DC75 /* CycleModel.swift in Sources */,
