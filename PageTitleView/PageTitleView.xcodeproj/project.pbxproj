@@ -174,8 +174,8 @@
 		FA6E963323AC773E00A4DC75 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FA6E963423AC773E00A4DC75 /* CycleModel.swift */,
 				FA6E963523AC773E00A4DC75 /* ViewModel.swift */,
+				FA6E963423AC773E00A4DC75 /* CycleModel.swift */,
 				FA6E963623AC773E00A4DC75 /* RoomModel.swift */,
 				FA6E963723AC773E00A4DC75 /* RecommendModel.swift */,
 			);
